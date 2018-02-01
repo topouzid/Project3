@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <dimen name="text_size_title">12sp</dimen>
+    <style name="text_title" parent="AppTheme">
+        <item name="android:textSize">32sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_marginRight">@dimen/text_horizontal_margin</item>
+        <item name="android:layout_marginLeft">@dimen/text_horizontal_margin</item>
+    </style>
+    <style name="text_questions" parent="AppTheme">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginRight">@dimen/text_horizontal_margin</item>
+        <item name="android:layout_marginLeft">@dimen/text_horizontal_margin</item>
+    </style>
+    <style name="text_answers" parent="AppTheme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">14dp</item>
+        <item name="android:layout_marginRight">@dimen/text_horizontal_margin</item>
+        <item name="android:layout_marginLeft">@dimen/text_horizontal_margin</item>
+    </style>
+    <style name="text_bmi_outcome" parent="AppTheme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">14dp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:layout_marginRight">@dimen/text_horizontal_margin</item>
+        <item name="android:layout_marginLeft">@dimen/text_horizontal_margin</item>
+    </style>
+</resources>
