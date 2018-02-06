@@ -47,7 +47,7 @@
     <string name="outcome_correct">Please read the outcome and correct the invalid values</string>
     <string name="age_values_accepted">Age should be between 1 and 99</string>
     <string name="height_values_accepted">Enter height between 150 and 215 cm</string>
-    <string name="weight_values_accepted">Enter weight between 45 and 199</string>
+    <string name="weight_values_accepted">Enter weight between 45 and 199 kg</string>
     <string name="bmi_15">you are severely underweight, consult a doctor immediately.</string>
     <string name="bmi_19">you should eat more, you are underweight.</string>
     <string name="bmi_25">you weight exactly as much as you should. Good job!</string>

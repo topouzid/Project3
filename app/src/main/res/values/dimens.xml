@@ -15,4 +15,6 @@
     <dimen name="box_elevation">3dp</dimen>
     <dimen name="box_margin">8dp</dimen>
     <dimen name="answers_vertical_margin">6dp</dimen>
+    <dimen name="landscape_banner_height">100dp</dimen>
+    <dimen name="portrait_banner_height">160dp</dimen>
 </resources>

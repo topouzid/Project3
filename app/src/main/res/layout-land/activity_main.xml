@@ -20,7 +20,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/portrait_banner_height"
+                    android:layout_height="@dimen/landscape_banner_height"
                     android:scaleType="centerCrop"
                     android:src="@drawable/headline" />
 
@@ -31,7 +31,7 @@
                     android:paddingTop="@dimen/legend_padding_vertical"
                     android:text="@string/app_name"
                     android:textSize="@dimen/app_title"
-                    android:textColor="@color/primaryText" />
+                    android:textColor="@color/primaryText"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -264,7 +264,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/portrait_banner_height"
+                    android:layout_height="@dimen/landscape_banner_height"
                     android:scaleType="centerCrop"
                     android:src="@drawable/checklistnb" />
 
