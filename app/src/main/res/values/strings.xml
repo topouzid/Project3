@@ -47,7 +47,7 @@
     <string name="outcome_correct">Please read the outcome and correct the invalid values</string>
     <string name="age_values_accepted">Age should be between 1 and 99</string>
     <string name="height_values_accepted">Enter height between 150 and 215 cm</string>
-    <string name="weight_values_accepted">Enter weight between 45 and 99</string>
+    <string name="weight_values_accepted">Enter weight between 45 and 199</string>
     <string name="bmi_15">you are severely underweight, consult a doctor immediately.</string>
     <string name="bmi_19">you should eat more, you are underweight.</string>
     <string name="bmi_25">you weight exactly as much as you should. Good job!</string>
@@ -61,6 +61,10 @@
     <string name="bad_habits_none_outcome">You don\'t have any habits that could damage your heart or kidneys, good job!</string>
     <string name="outcome_bmi_title">"Your BMI is "</string>
     <string name="your_score_is">"Your score is "</string>
-    <string name="out_of_three">" out of 3"</string>
+    <string name="out_of_all">" out of 4"</string>
     <string name="complete_the_quiz">Please complete the quiz before hitting that button!</string>
+    <string name="eat_exercise_text">You are about to run a marathon where you will burn about 2600 calories. You have to eat a 2600 calories meal before the marathon in order to be ok.</string>
+    <string name="toast_compliment_0">You suck!</string>
+    <string name="toast_compliment_middle">Try harder!</string>
+    <string name="toast_compliment_ok">Well done!</string>
 </resources>

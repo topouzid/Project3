@@ -27,7 +27,7 @@
     <string name="output_title_gender">"Φύλο: "</string>
     <string name="output_title_name">"Όνομα: "</string>
     <string name="text_quiz">Και ένα quiz για να ελέγξεις τις γνώσεις σου</string>
-    <string name="text_physical">Η άθληση στη φύση (περπάτημα, σκάλες, πεζοπορίες, κολύμπι) είναι καλύτερο από την άθληση στο γυμναστήριο.</string>
+    <string name="text_physical">Η άθληση στη φύση (περπάτημα, σκάλες, πεζοπορίες, κολύμπι) είναι καλύτερη από την άθληση στο γυμναστήριο.</string>
     <string name="radio_correct">Σωστά</string>
     <string name="radio_wrong">Λάθος</string>
     <string name="text_physical_answer">Όταν είσαι δραστήριος στην καθημερινότητά σου και στη φύση, γυμνάζονται όλοι οι μύες κάθε μέρα, βελτιώνεις αντοχή, δύναμη και ψυχή. Στο γυμναστήριο βελτιώνεις ομάδες μυών ενώ κάποια μέρα ίσως να βαριέσαι να πας.</string>
@@ -45,7 +45,7 @@
     <string name="outcome_correct">Δες τι δεν πήγε καλά και διόρθωσέ το</string>
     <string name="age_values_accepted">Αποδεκτές ηλικίες για το εργαλείο υπολογισμού: 1-99 ετών</string>
     <string name="height_values_accepted">Αποδεκτό ύψος: 150-215 εκατοστά</string>
-    <string name="weight_values_accepted">Αποδεκτό βάρος: 45-99 κιλά</string>
+    <string name="weight_values_accepted">Αποδεκτό βάρος: 45-199 κιλά</string>
     <string name="bmi_15">είσαι πολύ αδύνατος/η. Δες έναν διατροφολόγο.</string>
     <string name="bmi_19">φάε λίγο παραπάνω, είσαι αρκετά αδύνατος.</string>
     <string name="bmi_25">ζυγίζεις όσο πρέπει να ζυγίζει ένας άνθρωπος του ύψους σου. Μπράβο!</string>
@@ -59,9 +59,13 @@
     <string name="bad_habits_none_outcome">Δεν έχεις κακές συνήθειες, συνέχισε έτσι!</string>
     <string name="outcome_bmi_title">"Ο δείκτης BMI είναι "</string>
     <string name="your_score_is">"Η βαθμολογία σου είναι "</string>
-    <string name="out_of_three">" από τα 3"</string>
+    <string name="out_of_all">" από τα 4"</string>
     <string name="complete_the_quiz">Συμπλήρωσε το quiz πριν πατήσεις το κουμπί.</string>
     <string name="exercise_level_2_outcome">Είσαι σε καλό δρόμο. Δοκίμασε να κάνεις ποδήλατο ή πρωινό τρέξιμο, σε αναζωογονούν.</string>
     <string name="exercise_level_3_outcome">Καλό το γυμναστήριο, αλλά μην ξεχνάες και τις φυσικές δραστηριότητες.</string>
     <string name="exercise_level_4_outcome">Ο καθαρός αέρας είναι καλύτερος, προσπάθησε να κάνεις τις προπονήσεις σου έξω.</string>
+    <string name="eat_exercise_text">Ετοιμάζεσαι να τρέξεις Μαραθώνιο όπου θα κάψεις περίπου 2600 θερμίδες. Πρέπει να φας γεύμα 2600 θερμίδων πριν τον αγώνα.</string>
+    <string name="toast_compliment_0">Χάλια είσαι!</string>
+    <string name="toast_compliment_middle">Μπορείς και καλύτερα!</string>
+    <string name="toast_compliment_ok">Μπράβο!</string>
 </resources>

@@ -1,11 +1,12 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorButtonNormal">@color/colorAccentLight</item>
     </style>
 
     <dimen name="text_size_title">12sp</dimen>
@@ -16,23 +17,36 @@
         <item name="android:layout_marginLeft">@dimen/text_horizontal_margin</item>
     </style>
     <style name="text_questions" parent="AppTheme">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
-        <item name="android:layout_marginRight">@dimen/text_horizontal_margin</item>
-        <item name="android:layout_marginLeft">@dimen/text_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/questions_vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/questions_vertical_margin</item>
+        <item name="android:background">@color/lightPrimaryColor</item>
+        <item name="android:paddingLeft">@dimen/text_title_padding_left</item>
+        <item name="android:layout_marginBottom">@dimen/questions_vertical_top_spacer</item>
     </style>
     <style name="text_answers" parent="AppTheme">
         <item name="android:textSize">14sp</item>
         <item name="android:paddingLeft">14dp</item>
         <item name="android:layout_marginRight">@dimen/text_horizontal_margin</item>
         <item name="android:layout_marginLeft">@dimen/text_horizontal_margin</item>
+        <item name="android:layout_marginBottom">@dimen/answers_vertical_margin</item>
+        <item name="android:layout_marginTop">@dimen/answers_vertical_margin</item>
     </style>
     <style name="text_bmi_outcome" parent="AppTheme">
         <item name="android:textSize">14sp</item>
-        <item name="android:paddingLeft">14dp</item>
+        <item name="android:paddingLeft">@dimen/text_title_padding_left</item>
         <item name="android:fontFamily">monospace</item>
         <item name="android:layout_marginRight">@dimen/text_horizontal_margin</item>
         <item name="android:layout_marginLeft">@dimen/text_horizontal_margin</item>
+        <item name="android:layout_marginBottom">@dimen/questions_vertical_margin</item>
+        <item name="android:layout_marginTop">@dimen/questions_vertical_margin</item>
+    </style>
+    <style name="questions_box" parent="AppTheme">
+        <item name="android:elevation">@dimen/box_elevation</item>
+        <item name="android:layout_margin">@dimen/box_margin</item>
+        <item name="android:background">@drawable/rectangle_outline</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">@dimen/answers_vertical_margin</item>
     </style>
 </resources>

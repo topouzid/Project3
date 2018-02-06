@@ -44,16 +44,6 @@ public class MainActivity extends AppCompatActivity {
         outState.putString(OUTPUT_MESSAGE, outputMessage);
         super.onSaveInstanceState(outState);
     }
-    /**
-     * This callback is called only when there is a saved instance previously saved using
-     * onSaveInstanceState(). We restore some state in onCreate() while we can optionally restore
-     * other state here, possibly usable after onStart() has completed.
-     * The savedInstanceState Bundle is same as the one used in onCreate().
-     *
-    @Override
-    public void onRestoreInstanceState(Bundle savedInstanceState) {
-        outputMessage = (String) savedInstanceState.getString(OUTPUT_MESSAGE);
-    }
 
     /**
      * This method is called when Calculate button is clicked
@@ -87,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
     private String createMessage(View view) {
         String errorMessage = "";
         boolean checkOk = true;
+        /**
+         * Check if there is a name, weight, age and height.
+         * Check if age, weight and height are within boundaries
+         */
         EditText candidate_name = (EditText) findViewById(R.id.name_edit);
         EditText candidate_age = (EditText) findViewById(R.id.age_edit);
         EditText candidate_height = (EditText) findViewById(R.id.height_edit);
@@ -122,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
             candidateHeight = Integer.valueOf(candidate_height.getText().toString());
         }
         if ((candidate_weight.getText().toString().equals("")) ||
-                (Integer.valueOf(candidate_weight.getText().toString()) >99) ||
+                (Integer.valueOf(candidate_weight.getText().toString()) >199) ||
                 (Integer.valueOf(candidate_weight.getText().toString()) <45)) {
             candidateWeight = 0;
             Toast toastMessage = Toast.makeText(this, getText(R.string.weight_values_accepted), Toast.LENGTH_LONG);
@@ -133,6 +127,9 @@ public class MainActivity extends AppCompatActivity {
             candidateWeight = Integer.valueOf(candidate_weight.getText().toString());
         }
 
+        /**
+         * Calculate BMI formula, set a message
+         */
         int candidateBmiValue = 0;
         String candidateBmiOutcome = "";
         if (checkOk) {
@@ -154,6 +151,9 @@ public class MainActivity extends AppCompatActivity {
             candidateBmiOutcome = getText(R.string.bmi_error).toString();
         }
 
+        /**
+         * Check gender, habits, level of exercise
+         */
         RadioButton radio_male = (RadioButton) findViewById(R.id.radio_male);
         RadioButton radio_female = (RadioButton) findViewById(R.id.radio_female);
         String personGender = "";
@@ -201,6 +201,9 @@ public class MainActivity extends AppCompatActivity {
             checkOk = false;
             errorMessage += getText(R.string.exercise_text);
         }
+        /**
+         * create message
+         */
         outputMessage = candidateName;
         outputMessage += "\n" + getText(R.string.text_age) + candidateAge;
         outputMessage += "\n" + getText(R.string.text_height) + candidateHeight;
@@ -210,15 +213,17 @@ public class MainActivity extends AppCompatActivity {
         outputMessage += levelOfExercise;
         outputMessage += "\n" + getText(R.string.outcome_bmi_title) + candidateBmiValue;
         outputMessage += ", " + candidateBmiOutcome;
-
         if (checkOk) {
             return (outputMessage);
         } else {
             return (errorMessage);
         }
-
     }
 
+    /**
+     * This method is called when CLEAN DATA button is pressed
+     * @param view
+     */
     public void resetBmiPart(View view) {
         outputMessage = getText(R.string.bmi_outcome_text).toString();
         candidateName = "";
@@ -251,12 +256,13 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void checkQuizAnswers(View view) {
-        RadioGroup radiogroup_physical = (RadioGroup) findViewById(R.id.radiogroup_physical_training);
-        RadioGroup radiogroup_discomfort = (RadioGroup) findViewById(R.id.radiogroup_discomfort);
         RadioButton physical_training_correct = (RadioButton) findViewById(R.id.radio_physical_training_correct);
         RadioButton physical_training_wrong = (RadioButton) findViewById(R.id.radio_physical_training_wrong);
         RadioButton discomfort_short_break = (RadioButton) findViewById(R.id.radio_discomfort_short_break);
         RadioButton discomfort_doctor = (RadioButton) findViewById(R.id.radio_discomfort_consult_professional);
+        RadioButton eat_correct = (RadioButton) findViewById(R.id.radio_eat_correct);
+        RadioButton eat_wrong = (RadioButton) findViewById(R.id.radio_eat_wrong);
+        String toast_compliment = "";
         boolean CheckOk = true;
         if (physical_training_correct.isChecked()) {
             quizResult += 1;
@@ -273,14 +279,29 @@ public class MainActivity extends AppCompatActivity {
         } else {
             CheckOk = false;
         }
+
+        if (eat_wrong.isChecked()) {
+            quizResult += 1;
+        } else if (eat_correct.isChecked()) {
+            quizResult += 0;
+        } else {
+            CheckOk = false;
+        }
         CheckBox get_checkup = (CheckBox) findViewById(R.id.check_get_checkup);
         CheckBox daily_training = (CheckBox) findViewById(R.id.check_daily_training);
         CheckBox eat_healthy = (CheckBox) findViewById(R.id.check_eat_healthy);
         if ((get_checkup.isChecked()) && (daily_training.isChecked()) && (eat_healthy.isChecked())) {
             quizResult += 1;
         }
+        if (quizResult == 0) {
+            toast_compliment = getText(R.string.toast_compliment_0).toString();
+        } else if (quizResult == 4) {
+            toast_compliment = getText(R.string.toast_compliment_ok).toString();
+        } else {
+            toast_compliment = getText(R.string.toast_compliment_middle).toString();
+        }
         if (CheckOk) {
-            Toast toastScore = Toast.makeText(this, getText(R.string.your_score_is).toString() + quizResult + getText(R.string.out_of_three), Toast.LENGTH_LONG);
+            Toast toastScore = Toast.makeText(this, toast_compliment + "\n" + getText(R.string.your_score_is).toString() + quizResult + getText(R.string.out_of_all), Toast.LENGTH_LONG);
             toastScore.show();
             quizResult = 0;
         } else {
@@ -298,6 +319,8 @@ public class MainActivity extends AppCompatActivity {
         radiogroup_physical.clearCheck();
         RadioGroup radiogroup_discomfort = (RadioGroup) findViewById(R.id.radiogroup_discomfort);
         radiogroup_discomfort.clearCheck();
+        RadioGroup radiogroup_eat_before_marathon = (RadioGroup) findViewById(R.id.radiogroup_eat_before_marathon);
+        radiogroup_eat_before_marathon.clearCheck();
         CheckBox get_checkup = (CheckBox) findViewById(R.id.check_get_checkup);
         get_checkup.setChecked(false);
         CheckBox daily_training = (CheckBox) findViewById(R.id.check_daily_training);

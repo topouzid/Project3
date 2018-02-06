@@ -27,8 +27,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/legend_padding_vertical"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/app_title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:background="#77000000"
+                    android:background="#99795548"
                     android:fontFamily="sans-serif-condensed"
                     android:paddingBottom="@dimen/legend_padding_vertical"
                     android:paddingLeft="@dimen/legend_padding_horizontal"
@@ -43,10 +51,10 @@
                 android:id="@+id/name_edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_name"
-                android:inputType="textCapWords"
                 android:layout_marginLeft="@dimen/text_horizontal_margin"
-                android:layout_marginRight="@dimen/text_horizontal_margin"/>
+                android:layout_marginRight="@dimen/text_horizontal_margin"
+                android:hint="@string/hint_name"
+                android:inputType="textCapWords" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -57,6 +65,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/text_title_padding_left"
                     android:text="@string/text_age" />
 
                 <EditText
@@ -90,64 +99,78 @@
                     android:inputType="number" />
             </LinearLayout>
 
-            <TextView
-                style="@style/text_questions"
+            <LinearLayout
+                style="@style/questions_box"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/text_gender" />
+                android:layout_height="wrap_content">
 
-            <RadioGroup
-                android:id="@+id/radiogroup_gender"
+
+                <TextView
+                    style="@style/text_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_gender" />
+
+                <RadioGroup
+                    android:id="@+id/radiogroup_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radio_male"
+                        style="@style/text_answers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/horizontal_radio_button_spacer"
+                        android:text="@string/radio_male" />
+
+                    <RadioButton
+                        android:id="@+id/radio_female"
+                        style="@style/text_answers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/radio_female" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/questions_box"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/radio_male"
+
+                <TextView
+                    style="@style/text_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bad_habits" />
+
+                <CheckBox
+                    android:id="@+id/check_smoking"
                     style="@style/text_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/horizontal_radio_button_spacer"
-                    android:text="@string/radio_male" />
+                    android:text="@string/smoking" />
 
-                <RadioButton
-                    android:id="@+id/radio_female"
+                <CheckBox
+                    android:id="@+id/check_drinking"
                     style="@style/text_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/radio_female" />
-            </RadioGroup>
+                    android:text="@string/drinking" />
 
-
-            <TextView
-                style="@style/text_questions"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/bad_habits" />
-
-            <CheckBox
-                android:id="@+id/check_smoking"
-                style="@style/text_answers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/smoking" />
-
-            <CheckBox
-                android:id="@+id/check_drinking"
-                style="@style/text_answers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/drinking" />
-
-            <CheckBox
-                android:id="@+id/check_sleeping"
-                style="@style/text_answers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sleeping" />
+                <CheckBox
+                    android:id="@+id/check_sleeping"
+                    style="@style/text_answers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sleeping" />
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radiogroup_exercise"
+                style="@style/questions_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -215,19 +238,20 @@
             </RelativeLayout>
 
             <LinearLayout
+                style="@style/questions_box"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <TextView
                     style="@style/text_questions"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/bmi_outcome_title" />
 
                 <TextView
-                    style="@style/text_bmi_outcome"
                     android:id="@+id/text_bmi_outcome"
+                    style="@style/text_bmi_outcome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/bmi_outcome_text" />
@@ -251,71 +275,86 @@
                     android:text="@string/text_quiz" />
             </RelativeLayout>
 
-            <TextView
-                style="@style/text_questions"
+            <LinearLayout
+                style="@style/questions_box"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/text_physical" />
+                android:layout_height="wrap_content">
 
-            <RadioGroup
-                android:id="@+id/radiogroup_physical_training"
+                <TextView
+                    style="@style/text_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_physical" />
+
+                <RadioGroup
+                    android:id="@+id/radiogroup_physical_training"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_physical_training_correct"
+                        style="@style/text_answers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/horizontal_radio_button_spacer"
+                        android:text="@string/radio_correct" />
+
+                    <RadioButton
+                        android:id="@+id/radio_physical_training_wrong"
+                        style="@style/text_answers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/radio_wrong" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/questions_box"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/radio_physical_training_correct"
+
+                <TextView
+                    style="@style/text_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_extreme_training" />
+
+                <CheckBox
+                    android:id="@+id/check_get_checkup"
                     style="@style/text_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/horizontal_radio_button_spacer"
-                    android:text="@string/radio_correct" />
+                    android:text="@string/check_doctor" />
 
-                <RadioButton
-                    android:id="@+id/radio_physical_training_wrong"
+                <CheckBox
+                    android:id="@+id/check_daily_training"
                     style="@style/text_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/radio_wrong" />
-            </RadioGroup>
+                    android:text="@string/check_training" />
 
-            <TextView
-                style="@style/text_questions"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/text_extreme_training" />
+                <CheckBox
+                    android:id="@+id/check_eat_healthy"
+                    style="@style/text_answers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_eat_healthy" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/check_get_checkup"
-                style="@style/text_answers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/check_doctor" />
-
-            <CheckBox
-                android:id="@+id/check_daily_training"
-                style="@style/text_answers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/check_training" />
-
-            <CheckBox
-                android:id="@+id/check_eat_healthy"
-                style="@style/text_answers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/check_eat_healthy" />
-
-            <TextView
-                style="@style/text_questions"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/text_discomfort" />
 
             <RadioGroup
                 android:id="@+id/radiogroup_discomfort"
+                style="@style/questions_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/text_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_discomfort" />
 
                 <RadioButton
                     android:id="@+id/radio_discomfort_short_break"
@@ -332,10 +371,45 @@
                     android:text="@string/radio_doctor" />
             </RadioGroup>
 
+            <LinearLayout
+                style="@style/questions_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/text_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eat_exercise_text" />
+                <RadioGroup
+                    android:id="@+id/radiogroup_eat_before_marathon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_eat_correct"
+                        style="@style/text_answers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/horizontal_radio_button_spacer"
+                        android:text="@string/radio_correct" />
+
+                    <RadioButton
+                        android:id="@+id/radio_eat_wrong"
+                        style="@style/text_answers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/radio_wrong" />
+                </RadioGroup>
+            </LinearLayout>
+
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/button_horizontal_padding"
+                android:paddingRight="@dimen/button_horizontal_padding">
 
                 <Button
                     android:layout_width="wrap_content"
