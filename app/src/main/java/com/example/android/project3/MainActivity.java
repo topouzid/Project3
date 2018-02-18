@@ -3,7 +3,6 @@ package com.example.android.project3;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -54,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         if ((candidateName.equals("")) || (candidateAge == 0) || (candidateWeight == 0) || (candidateHeight == 0))  {
             Toast toastMessage = Toast.makeText(this, getText(R.string.outcome_correct), Toast.LENGTH_LONG);
             toastMessage.show();
-            //return;
         }
         displayBmi(bmiReport);
     }
@@ -66,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
     private void displayBmi (String bmiMessage) {
         TextView displayBmiAndOutcome = (TextView) findViewById(R.id.text_bmi_outcome);
         displayBmiAndOutcome.setText(bmiMessage);
-
     }
 
     /**
@@ -102,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
             errorMessage += getText(R.string.age_values_accepted) + "\n";
         } else {
             candidateAge = Integer.valueOf(candidate_age.getText().toString());
-
         }
         if ((candidate_height.getText().toString().equals("")) ||
                 (Integer.valueOf(candidate_height.getText().toString()) > 215) ||
@@ -271,7 +267,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             CheckOk = false;
         }
-
         if (discomfort_doctor.isChecked()) {
             quizResult += 1;
         } else if (discomfort_short_break.isChecked()) {
@@ -279,7 +274,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             CheckOk = false;
         }
-
         if (eat_wrong.isChecked()) {
             quizResult += 1;
         } else if (eat_correct.isChecked()) {
@@ -293,6 +287,7 @@ public class MainActivity extends AppCompatActivity {
         if ((get_checkup.isChecked()) && (daily_training.isChecked()) && (eat_healthy.isChecked())) {
             quizResult += 1;
         }
+        /** create a toast message depending on your score */
         if (quizResult == 0) {
             toast_compliment = getText(R.string.toast_compliment_0).toString();
         } else if (quizResult == 4) {

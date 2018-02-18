@@ -8,7 +8,6 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorButtonNormal">@color/colorAccentLight</item>
     </style>
-
     <dimen name="text_size_title">12sp</dimen>
     <style name="text_title" parent="AppTheme">
         <item name="android:textSize">32sp</item>
@@ -24,6 +23,7 @@
         <item name="android:paddingBottom">@dimen/questions_vertical_margin</item>
         <item name="android:background">@color/lightPrimaryColor</item>
         <item name="android:paddingLeft">@dimen/text_title_padding_left</item>
+        <item name="android:paddingRight">@dimen/text_title_padding_right</item>
         <item name="android:layout_marginBottom">@dimen/questions_vertical_top_spacer</item>
     </style>
     <style name="text_answers" parent="AppTheme">

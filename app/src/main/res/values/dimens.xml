@@ -10,6 +10,7 @@
     <dimen name="text_horizontal_margin">8dp</dimen>
     <dimen name="app_title">18sp</dimen>
     <dimen name="text_title_padding_left">6dp</dimen>
+    <dimen name="text_title_padding_right">4dp</dimen>
     <dimen name="questions_vertical_margin">8dp</dimen>
     <dimen name="questions_vertical_top_spacer">2dp</dimen>
     <dimen name="box_elevation">3dp</dimen>
