@@ -4,29 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.project3.MainActivity">
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/landscape_banner_height"
                     android:scaleType="centerCrop"
                     android:src="@drawable/headline" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="@dimen/activity_horizontal_margin"
                     android:paddingTop="@dimen/legend_padding_vertical"
                     android:text="@string/app_name"
-                    android:textSize="@dimen/app_title"
-                    android:textColor="@color/primaryText"/>
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/app_title" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -39,8 +45,9 @@
                     android:paddingTop="@dimen/legend_padding_vertical"
                     android:text="@string/intro_text"
                     android:textColor="@android:color/white"
-                    android:textSize="@dimen/text_size_title" />
+                    android:textSize="@dimen/text_size_caption" />
             </RelativeLayout>
+
             <EditText
                 android:id="@+id/name_edit"
                 android:layout_width="match_parent"
@@ -49,35 +56,42 @@
                 android:layout_marginRight="@dimen/text_horizontal_margin"
                 android:hint="@string/hint_name"
                 android:inputType="textCapWords" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/text_horizontal_margin"
                 android:paddingRight="@dimen/text_horizontal_margin">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="@dimen/text_title_padding_left"
                     android:text="@string/text_age" />
+
                 <EditText
                     android:id="@+id/age_edit"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/text_height" />
+
                 <EditText
                     android:id="@+id/height_edit"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:inputType="number" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/text_weight" />
+
                 <EditText
                     android:id="@+id/weight_edit"
                     android:layout_width="0dp"
@@ -85,20 +99,24 @@
                     android:layout_weight="1"
                     android:inputType="number" />
             </LinearLayout>
+
             <LinearLayout
                 style="@style/questions_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     style="@style/text_questions"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/text_gender" />
+
                 <RadioGroup
                     android:id="@+id/radiogroup_gender"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <RadioButton
                         android:id="@+id/radio_male"
                         style="@style/text_answers"
@@ -106,6 +124,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="@dimen/horizontal_radio_button_spacer"
                         android:text="@string/radio_male" />
+
                     <RadioButton
                         android:id="@+id/radio_female"
                         style="@style/text_answers"
@@ -114,27 +133,32 @@
                         android:text="@string/radio_female" />
                 </RadioGroup>
             </LinearLayout>
+
             <LinearLayout
                 style="@style/questions_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     style="@style/text_questions"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/bad_habits" />
+
                 <CheckBox
                     android:id="@+id/check_smoking"
                     style="@style/text_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/smoking" />
+
                 <CheckBox
                     android:id="@+id/check_drinking"
                     style="@style/text_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/drinking" />
+
                 <CheckBox
                     android:id="@+id/check_sleeping"
                     style="@style/text_answers"
@@ -142,40 +166,47 @@
                     android:layout_height="wrap_content"
                     android:text="@string/sleeping" />
             </LinearLayout>
+
             <RadioGroup
                 android:id="@+id/radiogroup_exercise"
                 style="@style/questions_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     style="@style/text_questions"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/exercise_text" />
+
                 <RadioButton
                     android:id="@+id/radio_exercise_level_0"
                     style="@style/text_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/exercise_level_0" />
+
                 <RadioButton
                     android:id="@+id/radio_exercise_level_1"
                     style="@style/text_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/exercise_level_1" />
+
                 <RadioButton
                     android:id="@+id/radio_exercise_level_2"
                     style="@style/text_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/exercise_level_2" />
+
                 <RadioButton
                     android:id="@+id/radio_exercise_level_3"
                     style="@style/text_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/exercise_level_3" />
+
                 <RadioButton
                     android:id="@+id/radio_exercise_level_4"
                     style="@style/text_answers"
@@ -183,16 +214,19 @@
                     android:layout_height="wrap_content"
                     android:text="@string/exercise_level_4" />
             </RadioGroup>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/button_horizontal_margin"
                     android:onClick="calculateBmi"
                     android:text="@string/button_calculate" />
+
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -201,16 +235,19 @@
                     android:onClick="resetBmiPart"
                     android:text="@string/button_reset_ui" />
             </RelativeLayout>
+
             <LinearLayout
                 style="@style/questions_box"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <TextView
                     style="@style/text_questions"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/bmi_outcome_title" />
+
                 <TextView
                     android:id="@+id/text_bmi_outcome"
                     style="@style/text_bmi_outcome"
@@ -218,14 +255,17 @@
                     android:layout_height="wrap_content"
                     android:text="@string/bmi_outcome_text" />
             </LinearLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/landscape_banner_height"
                     android:scaleType="centerCrop"
                     android:src="@drawable/checklistnb" />
+
                 <TextView
                     style="@style/text_title"
                     android:layout_width="match_parent"
@@ -233,20 +273,24 @@
                     android:layout_alignParentBottom="true"
                     android:text="@string/text_quiz" />
             </RelativeLayout>
+
             <LinearLayout
                 style="@style/questions_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     style="@style/text_questions"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/text_physical" />
+
                 <RadioGroup
                     android:id="@+id/radiogroup_physical_training"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     <RadioButton
                         android:id="@+id/radio_physical_training_correct"
                         style="@style/text_answers"
@@ -254,6 +298,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="@dimen/horizontal_radio_button_spacer"
                         android:text="@string/radio_correct" />
+
                     <RadioButton
                         android:id="@+id/radio_physical_training_wrong"
                         style="@style/text_answers"
@@ -262,27 +307,32 @@
                         android:text="@string/radio_wrong" />
                 </RadioGroup>
             </LinearLayout>
+
             <LinearLayout
                 style="@style/questions_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     style="@style/text_questions"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/text_extreme_training" />
+
                 <CheckBox
                     android:id="@+id/check_get_checkup"
                     style="@style/text_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/check_doctor" />
+
                 <CheckBox
                     android:id="@+id/check_daily_training"
                     style="@style/text_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/check_training" />
+
                 <CheckBox
                     android:id="@+id/check_eat_healthy"
                     style="@style/text_answers"
@@ -290,22 +340,26 @@
                     android:layout_height="wrap_content"
                     android:text="@string/check_eat_healthy" />
             </LinearLayout>
+
             <RadioGroup
                 android:id="@+id/radiogroup_discomfort"
                 style="@style/questions_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     style="@style/text_questions"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/text_discomfort" />
+
                 <RadioButton
                     android:id="@+id/radio_discomfort_short_break"
                     style="@style/text_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/radio_stop" />
+
                 <RadioButton
                     android:id="@+id/radio_discomfort_consult_professional"
                     style="@style/text_answers"
@@ -313,20 +367,24 @@
                     android:layout_height="wrap_content"
                     android:text="@string/radio_doctor" />
             </RadioGroup>
+
             <LinearLayout
                 style="@style/questions_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     style="@style/text_questions"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/eat_exercise_text" />
+
                 <RadioGroup
                     android:id="@+id/radiogroup_eat_before_marathon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     <RadioButton
                         android:id="@+id/radio_eat_correct"
                         style="@style/text_answers"
@@ -334,6 +392,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="@dimen/horizontal_radio_button_spacer"
                         android:text="@string/radio_correct" />
+
                     <RadioButton
                         android:id="@+id/radio_eat_wrong"
                         style="@style/text_answers"
@@ -342,17 +401,56 @@
                         android:text="@string/radio_wrong" />
                 </RadioGroup>
             </LinearLayout>
+            <LinearLayout
+                style="@style/questions_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/text_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/marathon_question_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edit_marathon_answer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_horizontal_margin"
+                        android:layout_marginRight="@dimen/text_horizontal_margin"
+                        android:layout_marginTop="@dimen/answers_vertical_margin"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/text_answers_left_padding"
+                        android:paddingRight="@dimen/activity_horizontal_margin" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/answers_vertical_margin"
+                        android:text="@string/meters_text"
+                        android:textSize="@dimen/text_q_a_sizes" />
+                </LinearLayout>
+            </LinearLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingLeft="@dimen/button_horizontal_padding"
                 android:paddingRight="@dimen/button_horizontal_padding">
+
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="checkQuizAnswers"
                     android:text="@string/button_check_quiz" />
+
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

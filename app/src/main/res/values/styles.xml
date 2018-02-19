@@ -8,16 +8,15 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorButtonNormal">@color/colorAccentLight</item>
     </style>
-    <dimen name="text_size_title">12sp</dimen>
     <style name="text_title" parent="AppTheme">
-        <item name="android:textSize">32sp</item>
+        <item name="android:textSize">@dimen/text_title_size_large</item>
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:layout_marginRight">@dimen/text_horizontal_margin</item>
         <item name="android:layout_marginLeft">@dimen/text_horizontal_margin</item>
         <item name="android:textColor">@color/primaryText</item>
     </style>
     <style name="text_questions" parent="AppTheme">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/text_q_a_sizes</item>
         <item name="android:textStyle">bold</item>
         <item name="android:paddingTop">@dimen/questions_vertical_margin</item>
         <item name="android:paddingBottom">@dimen/questions_vertical_margin</item>
@@ -27,15 +26,15 @@
         <item name="android:layout_marginBottom">@dimen/questions_vertical_top_spacer</item>
     </style>
     <style name="text_answers" parent="AppTheme">
-        <item name="android:textSize">14sp</item>
-        <item name="android:paddingLeft">14dp</item>
+        <item name="android:textSize">@dimen/text_q_a_sizes</item>
+        <item name="android:paddingLeft">@dimen/text_answers_left_padding</item>
         <item name="android:layout_marginRight">@dimen/text_horizontal_margin</item>
         <item name="android:layout_marginLeft">@dimen/text_horizontal_margin</item>
         <item name="android:layout_marginBottom">@dimen/answers_vertical_margin</item>
         <item name="android:layout_marginTop">@dimen/answers_vertical_margin</item>
     </style>
     <style name="text_bmi_outcome" parent="AppTheme">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/text_q_a_sizes</item>
         <item name="android:paddingLeft">@dimen/text_title_padding_left</item>
         <item name="android:fontFamily">monospace</item>
         <item name="android:layout_marginRight">@dimen/text_horizontal_margin</item>

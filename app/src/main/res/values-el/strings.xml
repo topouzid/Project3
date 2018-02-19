@@ -59,7 +59,7 @@
     <string name="bad_habits_none_outcome">Δεν έχεις κακές συνήθειες, συνέχισε έτσι!</string>
     <string name="outcome_bmi_title">"Ο δείκτης BMI είναι "</string>
     <string name="your_score_is">"Η βαθμολογία σου είναι "</string>
-    <string name="out_of_all">" από τα 4"</string>
+    <string name="out_of_all">/100</string>
     <string name="complete_the_quiz">Συμπλήρωσε το quiz πριν πατήσεις το κουμπί.</string>
     <string name="exercise_level_2_outcome">Είσαι σε καλό δρόμο. Δοκίμασε να κάνεις ποδήλατο ή πρωινό τρέξιμο, σε αναζωογονούν.</string>
     <string name="exercise_level_3_outcome">Καλό το γυμναστήριο, αλλά μην ξεχνάες και τις φυσικές δραστηριότητες.</string>
@@ -68,4 +68,6 @@
     <string name="toast_compliment_0">Χάλια είσαι!</string>
     <string name="toast_compliment_middle">Μπορείς και καλύτερα!</string>
     <string name="toast_compliment_ok">Μπράβο!</string>
+    <string name="marathon_question_text">Μιλώντας για Μαραθώνιο, πόσα μέτρα είναι ένας μαραθώνιος; (Συμπληρώστε τον αριθμό μέτρων).</string>
+    <string name="meters_text">μέτρα</string>
 </resources>

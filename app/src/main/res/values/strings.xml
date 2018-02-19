@@ -61,10 +61,12 @@
     <string name="bad_habits_none_outcome">You don\'t have any habits that could damage your heart or kidneys, good job!</string>
     <string name="outcome_bmi_title">"Your BMI is "</string>
     <string name="your_score_is">"Your score is "</string>
-    <string name="out_of_all">" out of 4"</string>
+    <string name="out_of_all">/100</string>
     <string name="complete_the_quiz">Please complete the quiz before hitting that button!</string>
     <string name="eat_exercise_text">You are about to run a marathon where you will burn about 2600 calories. You have to eat a 2600 calories meal before the marathon in order to be ok.</string>
     <string name="toast_compliment_0">You suck!</string>
     <string name="toast_compliment_middle">Try harder!</string>
     <string name="toast_compliment_ok">Well done!</string>
+    <string name="marathon_question_text">Since we\'re at it, how many meters is the Marathon? (please give a numerical value).</string>
+    <string name="meters_text">meters</string>
 </resources>

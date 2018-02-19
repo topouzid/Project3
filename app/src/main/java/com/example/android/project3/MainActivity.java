@@ -3,6 +3,7 @@ package com.example.android.project3;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -15,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
     String candidateName;
     static String outputMessage = "";
-    int candidateAge = 0;
-    int candidateHeight = 0;
-    int candidateWeight = 0;
-    int quizResult = 0;
+    int candidateAge;
+    int candidateHeight;
+    int candidateWeight;
+    int quizResult;
     final static String OUTPUT_MESSAGE = "SavedStateOfOutputMessage";
 
     @Override
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 (Integer.valueOf(candidate_age.getText().toString()) > 99) ||
                 (Integer.valueOf(candidate_age.getText().toString()) < 1 )) {
             candidateAge = 0;
-            Toast toastMessage = Toast.makeText(this, getText(R.string.age_values_accepted), Toast.LENGTH_LONG);
+            Toast toastMessage = Toast.makeText(this, getText(R.string.age_values_accepted), Toast.LENGTH_SHORT);
             toastMessage.show();
             checkOk = false;
             errorMessage += getText(R.string.age_values_accepted) + "\n";
@@ -104,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 (Integer.valueOf(candidate_height.getText().toString()) > 215) ||
                 (Integer.valueOf(candidate_height.getText().toString()) < 150 )) {
             candidateHeight = 0;
-            Toast toastMessage = Toast.makeText(this, getText(R.string.height_values_accepted), Toast.LENGTH_LONG);
+            Toast toastMessage = Toast.makeText(this, getText(R.string.height_values_accepted), Toast.LENGTH_SHORT);
             toastMessage.show();
             checkOk = false;
             errorMessage += getText(R.string.height_values_accepted) + "\n";
@@ -115,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 (Integer.valueOf(candidate_weight.getText().toString()) >199) ||
                 (Integer.valueOf(candidate_weight.getText().toString()) <45)) {
             candidateWeight = 0;
-            Toast toastMessage = Toast.makeText(this, getText(R.string.weight_values_accepted), Toast.LENGTH_LONG);
+            Toast toastMessage = Toast.makeText(this, getText(R.string.weight_values_accepted), Toast.LENGTH_SHORT);
             toastMessage.show();
             checkOk = false;
             errorMessage += getText(R.string.weight_values_accepted) + "\n";
@@ -263,6 +264,10 @@ public class MainActivity extends AppCompatActivity {
         if (physical_training_correct.isChecked()) {
             quizResult += 1;
         } else if (physical_training_wrong.isChecked()) {
+            /** I need this 'else if' to check that at least one radio button is selected,
+             * if the wrong one is selected, do nothing and don't add points, the following line
+             * is added only to have something written to this conditional statement. I could
+             * leave this 'else if' empty but would give a warning about empty body in statement. */
             quizResult += 0;
         } else {
             CheckOk = false;
@@ -287,21 +292,30 @@ public class MainActivity extends AppCompatActivity {
         if ((get_checkup.isChecked()) && (daily_training.isChecked()) && (eat_healthy.isChecked())) {
             quizResult += 1;
         }
+        TextView marathon_distance = (TextView) findViewById(R.id.edit_marathon_answer);
+        if (marathon_distance.getText().toString().equals("")) {
+            CheckOk = false;
+        } else if ((marathon_distance.getText().toString().equals("42195"))
+                ||(marathon_distance.getText().toString().equals("42.195"))
+                ||(marathon_distance.getText().toString().equals("42,195"))) {
+            quizResult += 1;
+        }
         /** create a toast message depending on your score */
         if (quizResult == 0) {
             toast_compliment = getText(R.string.toast_compliment_0).toString();
-        } else if (quizResult == 4) {
+        } else if (quizResult == 5) {
             toast_compliment = getText(R.string.toast_compliment_ok).toString();
         } else {
             toast_compliment = getText(R.string.toast_compliment_middle).toString();
         }
         if (CheckOk) {
-            Toast toastScore = Toast.makeText(this, toast_compliment + "\n" + getText(R.string.your_score_is).toString() + quizResult + getText(R.string.out_of_all), Toast.LENGTH_LONG);
+            Toast toastScore = Toast.makeText(this, toast_compliment + "\n" + getText(R.string.your_score_is).toString() + (quizResult * 20) + getText(R.string.out_of_all), Toast.LENGTH_LONG);
             toastScore.show();
             quizResult = 0;
         } else {
             Toast toastIncomplete = Toast.makeText(this, getText(R.string.complete_the_quiz), Toast.LENGTH_LONG);
             toastIncomplete.show();
+            quizResult = 0;
         }
     }
 
@@ -322,6 +336,8 @@ public class MainActivity extends AppCompatActivity {
         daily_training.setChecked(false);
         CheckBox eat_healthy = (CheckBox) findViewById(R.id.check_eat_healthy);
         eat_healthy.setChecked(false);
+        TextView marathon_distance = (TextView) findViewById(R.id.edit_marathon_answer);
+        marathon_distance.setText("");
         quizResult = 0;
     }
 }

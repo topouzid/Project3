@@ -39,7 +39,7 @@
                     android:paddingTop="@dimen/legend_padding_vertical"
                     android:text="@string/intro_text"
                     android:textColor="@android:color/white"
-                    android:textSize="@dimen/text_size_title" />
+                    android:textSize="@dimen/text_size_caption" />
             </RelativeLayout>
             <EditText
                 android:id="@+id/name_edit"
@@ -61,7 +61,7 @@
                     android:text="@string/text_age" />
                 <EditText
                     android:id="@+id/age_edit"
-                    android:layout_width="40dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
                 <TextView
@@ -341,6 +341,40 @@
                         android:layout_height="wrap_content"
                         android:text="@string/radio_wrong" />
                 </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/questions_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/text_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/marathon_question_text" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/edit_marathon_answer"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:gravity="right"
+                        android:paddingLeft="@dimen/text_answers_left_padding"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/text_horizontal_margin"
+                        android:layout_marginLeft="@dimen/text_horizontal_margin"
+                        android:layout_marginTop="@dimen/answers_vertical_margin" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/meters_text"
+                        android:textSize="@dimen/text_q_a_sizes"
+                        android:layout_marginTop="@dimen/answers_vertical_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+                </LinearLayout>
             </LinearLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
